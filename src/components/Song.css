@@ -1,0 +1,15 @@
+.song{
+    width: 100%;
+}
+
+.song-title{
+    font-size: small;
+}
+
+.bg-selected-song{
+    background-color: var(--bs-secondary);
+}
+
+.bg-not-selected-song{
+    background-color: white;
+}

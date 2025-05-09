@@ -1,0 +1,13 @@
+:root{
+    --app-white: #f7f3f2;
+}
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--app-white);
+}

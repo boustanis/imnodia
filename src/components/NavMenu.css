@@ -1,0 +1,23 @@
+#NavMenu{
+    height:3rem;
+}
+
+.selected-btn, .selected-btn:hover{
+    background-color: var(--app-white);
+    border-radius: unset !important;
+    border:1px grey solid !important;
+}
+
+.selected-btn-icon{
+    color:var(--bs-secondary) !important;
+}
+
+.not-selected-btn{
+    background-color: var(--app-white);
+    border-radius: unset !important;
+    border:1px grey solid !important;
+}
+
+.not-selected-btn-icon{
+    color:var(--bs-secondary) !important;
+}
