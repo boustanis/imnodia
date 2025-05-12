@@ -11,14 +11,14 @@ function App(){
   let selections = [];
 
   useEffect(() => {
-    fetch("/data/songs-full.json")
+    fetch(`./data/songs-full.json`)
       .then(res => res.json())
       .then(json => setSongs(json.songs));
   }, []);
 
   function onSelectSong(song){
     if(selections.includes(song)){
-      const index = selections.indexOf(s => s.number === song.number);
+      const index = selections.indexOf(song);
       selections.splice(index,1);
     }
     else
@@ -38,7 +38,6 @@ function App(){
 
   return(
     <div id="MainPage" className='w-100 d-flex flex-column'>
-      
       <div id="MainPageHeader" className='text-center d-flex align-items-center justify-content-between'>
         <div className='fs-4 ms-3'>Περιεχόμενα</div>
         <button id='ShowSelectionsBtn' className='btn btn-success' onClick={showSelections}>SHOW SELECTIONS!</button>
@@ -54,7 +53,7 @@ function App(){
                               title={song.title}
                               handleSelections={() => onSelectSong(song)}/>)
           :
-          <h1>oops</h1>
+          <h1>Searching songs...</h1>
         }
       </div>
 

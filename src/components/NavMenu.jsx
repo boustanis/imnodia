@@ -8,17 +8,17 @@ export default function NavMenu({currentPage, data}) {
         {
             id:"home",
             icon:"fa-solid fa-house",
-            path:"/"
+            path:`${import.meta.env.BASE_URL}`
         },
         {
             id:"playlist",
             icon:"fa-solid fa-play",
-            path:"/playlist"
+            path:`${import.meta.env.BASE_URL}playlist`
         },
         {
             id:"chords",
             icon:"fa-solid fa-music",
-            path:"/chords"
+            path:`${import.meta.env.BASE_URL}chords`
         }
     ]
 

@@ -9,7 +9,7 @@ export default function UnderConstruction() {
             <span className='fs-2'>Under Construction!</span>
             <i className="fs-4 fa-solid fa-screwdriver-wrench ms-4"></i>
         </div>
-        <Link to={"/"} className='d-flex align-items-center justify-content-center p-2 text-decoration-none bg bg-secondary rounded w-50 text-light'>
+        <Link to={import.meta.env.BASE_URL} className='d-flex align-items-center justify-content-center p-2 text-decoration-none bg bg-secondary rounded w-50 text-light'>
             Go Home
             <i className="ms-3 fa-solid fa-house"></i>
         </Link>

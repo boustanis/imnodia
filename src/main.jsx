@@ -10,27 +10,33 @@ import UnderConstruction from './components/UnderConstruction.jsx';
 
 import './index.css'
 
-const router = createBrowserRouter([
+const basePath = import.meta.env.BASE_URL;
+
+const paths = [
   {
-    path:"/",
+    path:`${basePath}`,
     element:<App/>
   },
   {
-    path:"/playlist",
+    path:`${basePath}playlist`,
     element:<Playlist/>
   },
   {
-    path:"/chords",
+    path:`${basePath}chords`,
     element:<UnderConstruction/>
   },
   {
-    path:"/test",
+    path:`${basePath}test`,
     element:<Test />
   }
-])
+];
+
+const router = createBrowserRouter(paths)
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router} />
   </StrictMode>,
 )
+
+console.log(paths);

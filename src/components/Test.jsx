@@ -5,7 +5,7 @@ export default function Test(props) {
   const [results, setResults] = useState([]);
 
   useEffect(() => {
-    fetch("/data/songs-full.json")
+    fetch("./data/songs-full.json")
       .then(res => res.json())
       .then(json => {setSongs(json.songs); setResults(json.songs); });
   },[]);

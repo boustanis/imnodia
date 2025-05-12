@@ -9,6 +9,8 @@ export default function Playlist() {
 
     const selectedSongs = location.state;
 
+    useEffect(()=>{console.log(import.meta.env.BASE_URL)},[])
+
     function nextSong(){
         if(currentSong < selectedSongs.length-1)
             setCurrentSong((prev) => prev + 1);
@@ -20,10 +22,18 @@ export default function Playlist() {
     }
 
     return (
+    selectedSongs.length == 0 ? 
+    <div className="d-flex flex-column text-center">
+        <h1>Select some songs first!</h1>
+        <a href={import.meta.env.BASE_URL}>HOME</a>
+    </div>
+
+    :
+
     <div className='d-flex flex-column justify-content-between' style={{width:"100%", height:"100dvh"}}>
         
-        <Link to={"/"} style={{position:"fixed", zIndex:"2",top:"1rem", right:"0.5rem", width:"fit-content"}} className='p-2 text-center bg bg-secondary text-light text-decoration-none rounded'>
-            <i class="fa-solid fa-house"></i>
+        <Link to={import.meta.env.BASE_URL} style={{position:"fixed", zIndex:"2",top:"1rem", right:"0.5rem", width:"fit-content"}} className='p-2 text-center bg bg-secondary text-light text-decoration-none rounded'>
+            <i className="fa-solid fa-house"></i>
         </Link>
 
 
